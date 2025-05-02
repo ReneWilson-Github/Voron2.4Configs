@@ -70,3 +70,23 @@ origin = https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
 managed_services = klipper
 primary_branch = main
 
+[update_manager moonraker-obico]
+type = git_repo
+path = /home/voron/moonraker-obico
+origin = https://github.com/TheSpaghettiDetective/moonraker-obico.git
+env = /home/voron/moonraker-obico/../moonraker-obico-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	moonraker-obico
+
+[update_manager afc-software]
+type = git_repo
+path = ~/AFC-Klipper-Add-On
+origin = https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
+managed_services = klipper
+primary_branch = main
+is_system_service = False
+info_tags = 
+	desc=AFC Klipper Add On
+
